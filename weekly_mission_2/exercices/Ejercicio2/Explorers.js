@@ -66,18 +66,27 @@ for (var x in [0,1,2]) {
 //for each
 const numbers = [0, 1, 2];
 console.log("Ejercicio 1 mostrando nombres")
+//
+explorers.forEach(explorer=>console.log(explorer.name))
 numbers.forEach(num => console.log(explorers[num].name))
 //2* Imprime el stack de cada explorer, usa FOR EACH
 console.log("Ejercicio 2 mostrando stack de explorers")
 numbers.forEach(num => console.log(explorers[num].stack))
+//
+explorers.forEach(item=>console.log(item.stack))
 //3* Crea una nueva lista con las listas de stacks de cada explorer, usa MAP
 const numbersSquare = numbers.map(function(num){ return explorers[num].stack})
 console.log("Ejercicio 3: lista de stacks usando MAP")
 console.log(numbersSquare)
+//
+console.log(explorers.map(lista1=>lista1.stack))
 //4* Obtén la lista de explorers que tengan en su stack "js", usa FILTER (para validar un elemento en un lista se usa el método includes)
 const stackJs = explorers.filter((explorers) => explorers.stack.includes('js'))
 console.log("Ejercicio 4: Filtrando stack js")
 console.log(stackJs)
+//
+const explorer_with_js=explorers.filter(lista1=>lista1.stack.includes("js"))
+console.log(explorer_with_js)
 //5* Busca el primer explorer que sea de la CDMX, usa FIND
 console.log("Ejercicio 5 encontrando explorers de la CDMX")
 const explorerCDMX = explorers.find((explorers) => explorers.city.includes('CDMX'))

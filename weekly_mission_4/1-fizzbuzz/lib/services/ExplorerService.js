@@ -5,8 +5,8 @@ class ExplorerService{
     }
     static filterByMission(explorers, mission){
         const explorermission = explorers.filter((explorer) => explorer.mission == mission);
-        console.log(explorermission.length)
-        this.NumExplorers=explorermission.length
+        console.log(explorermission.length);
+        this.NumExplorers=explorermission.length;
     }
     static getAmountOfExplorersByMission(explorers, mission){
         this.filterByMission(explorers, mission);
@@ -15,7 +15,7 @@ class ExplorerService{
     static getExplorersUsernamesByMission(explorers, mission){
         const explorersInNodeToGetUsernames = explorers.filter((explorer) => explorer.mission == mission);
         const usernamesInNode = explorersInNodeToGetUsernames.map((explorer) => explorer.githubUsername);
-        console.log(usernamesInNode)
+        console.log(usernamesInNode);
         this.usernames=usernamesInNode;
         return this.usernames;
     }
